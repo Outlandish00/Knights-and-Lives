@@ -1,0 +1,21 @@
+.screen-container{
+    background-color: #5e3ba6;
+    border-left: 15px solid black;
+    border-right: 15px solid black;
+    border-top: 15px solid black;
+    width: 45vw;
+    height: 98vh;
+    display: flex;
+    justify-content: center;
+
+}
+.screen-inner-container{
+    display: flex;
+    background-color:#889887 ;
+    border: 55px solid black;
+    border-radius: 10px;
+    width: 35vw;
+    height: 70vh;
+    margin-top: 2rem;
+    align-items: end;
+}

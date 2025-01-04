@@ -1,0 +1,6 @@
+@life_sim_HostAddress = http://localhost:5119
+
+GET {{life_sim_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
