@@ -1,0 +1,35 @@
+.menu-bar-container{
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    background-color:#3e5a1f ;
+    border-top: 5px solid #6b7c38
+
+}
+#menu-button{
+    padding: 0;
+    border-radius: 50%;
+    width: 75px; 
+    height: 75px;
+    /* font-family: "Micro 5", serif; Micro Font */
+    font-size: 20px;
+    position: relative;
+    line-height: 0.75;
+    font-family: "Jacquard 12", serif;
+    top: -20px;
+    background-color: #3f5e22;
+border: solid #6b7c38;
+}
+
+.menu-item{
+    height: auto;
+    flex-basis: 0; /* Ensures they start with equal base width */
+    flex-grow: 1;
+    background-color:#3e5a1f ;
+}
+.menu-item:hover{
+    background-image: radial-gradient(circle 50px, #3e5a1f, #6b7c38);
+}
+#menu-button:hover{
+    background-image: radial-gradient(circle 50px, #3e5a1f, #6b7c38);
+}

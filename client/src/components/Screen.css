@@ -11,11 +11,12 @@
 }
 .screen-inner-container{
     display: flex;
-    background-color:#889887 ;
+    background-image: radial-gradient(circle 350px, #6b7c38, #3e5a1f);
     border: 55px solid black;
     border-radius: 10px;
     width: 35vw;
     height: 70vh;
     margin-top: 2rem;
     align-items: end;
+    flex-direction: column-reverse;
 }
