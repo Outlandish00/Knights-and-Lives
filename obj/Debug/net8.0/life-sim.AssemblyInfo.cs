@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("life-sim")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c3128cae784bd6ad5afe4d5030fcf875ac949905")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+aad635ea742ff9dad0e2f52ed6ba83c55ec95e4c")]
 [assembly: System.Reflection.AssemblyProductAttribute("life-sim")]
 [assembly: System.Reflection.AssemblyTitleAttribute("life-sim")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
