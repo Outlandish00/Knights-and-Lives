@@ -1,0 +1,12 @@
+.yearly-event{
+    font-family: "Micro 5", serif;
+    font-size: 20px;
+}
+.yearly-event-item{
+    margin: 10px;
+    border-top: 2px solid black;
+}
+.yearly-event-year{
+    font-family: "Jacquard 12", serif;
+    font-size: 40px;
+}
