@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { getARandomNumberInRange } from "../scripts/scripts";
 import "./MenuBar.css"
 
-export const MenuBar = ({allYearlyEvents, addNewEvent}) => {
+export const MenuBar = ({allYearlyEvents, addNewEvent, currentYear , setCurrentYear}) => {
     const [usedEvents, setUsedEvents] = useState([])
     const getRandomNotUsedYearlyEvent = () => {
         const randomIndex = getARandomNumberInRange(0, allYearlyEvents.length)
@@ -10,8 +10,9 @@ export const MenuBar = ({allYearlyEvents, addNewEvent}) => {
         if (!usedEvents.some(event => event === foundRandomEvent && allYearlyEvents.length))
         {
             console.log(foundRandomEvent)
-            setUsedEvents((events) => [...events,allYearlyEvents[randomIndex]])
+            setUsedEvents((events) => [...events,foundRandomEvent])
             addNewEvent(foundRandomEvent);
+            setCurrentYear(currentYear + 1)
         }
         else {return getRandomNotUsedYearlyEvent();}
     }
