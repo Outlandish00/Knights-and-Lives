@@ -11,7 +11,7 @@
 }
 .screen-inner-container{
     display: flex;
-    background-image: radial-gradient(circle 350px, #6b7c38, #3e5a1f);
+    background-image: radial-gradient(circle 345px, #c1de31, #3e5a1f);
     border: 55px solid black;
     border-radius: 10px;
     width: 35vw;

@@ -6,8 +6,99 @@
 }
 .yearly-event-screen{
     width: 100%;
-    height: 24rem;
+    height: 23rem;
     overflow: auto;
     display: flex;
     flex-direction: column-reverse;
+}
+
+.header-screen{
+    display: flex;
+    width: 95%;
+    height: 9.0rem;
+    justify-content: space-evenly;
+    margin-left: auto;
+    margin-right: auto;
+}
+.bars-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    width: 25%;
+    height: 9rem;
+    flex-grow: 2;
+}
+.name-container{
+    width: 50%;
+    height: 9rem; 
+    flex-grow: 2;
+    width: 25%;
+}
+.bars-name{
+    height: 9.0rem;
+    width: 60px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+
+}
+.bars-names-list{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    text-align: right;
+    list-style-type: none; 
+    padding: 0;
+    padding-right: 10px;
+    height: 100%;
+    font-size: 20px;
+    margin: 0;
+    font-family: "Jacquard 12", serif;
+}
+.hp-bar-outer{
+    height: 20px;
+    border: 2px solid black;
+}
+.hp-bar-inner{
+    width: var(--health-width);
+    background-color: var(--bar-color);
+    height: 100%;
+    border-right: 2px solid black;
+    transition: width 0.3s ease;
+}
+.hygeine-bar-outer{
+    height: 20px;
+    border: 2px solid black;
+}
+
+.hygeine-bar-inner{
+    width: var(--hygeine-width);
+    background-color: var(--bar-color);
+    border-right: 2px solid black;
+    height: 100%;
+}
+
+
+.food-bar-outer{
+    height: 20px;
+    border: 2px solid black;
+}
+
+.food-bar-inner{
+    width: var(--food-width);
+    background-color: var(--bar-color);
+    border-right: 2px solid black;
+    height: 100%;
+}
+
+.mood-bar-outer{
+    height: 20px;
+    border: 2px solid black;
+}
+
+.mood-bar-inner{
+    width: var(--mood-width);
+    background-color: var(--bar-color);
+    border-right: 2px solid black;
+    height: 100%;
 }

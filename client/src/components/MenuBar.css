@@ -28,8 +28,8 @@ border: solid #6b7c38;
     background-color:#3e5a1f ;
 }
 .menu-item:hover{
-    background-image: radial-gradient(circle 50px, #3e5a1f, #6b7c38);
+    background-image: radial-gradient(circle 60px, #c1de31, #3e5a1f);
 }
 #menu-button:hover{
-    background-image: radial-gradient(circle 50px, #3e5a1f, #6b7c38);
+    background-image: radial-gradient(circle 30px, #c1de31, #3e5a1f);
 }
