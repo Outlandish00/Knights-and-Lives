@@ -1,0 +1,28 @@
+.new-sim-container{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.game-title{
+    
+}
+
+.game-title-text{
+    height: 100%;
+    width: 100%;
+}
+.name-input-container h2{
+    margin: 0;
+
+}
+.name-input-container{
+    display: flex;
+    justify-content: space-evenly;
+}
+.family-name-container{
+    display: flex;
+    flex-direction: column-reverse;
+}

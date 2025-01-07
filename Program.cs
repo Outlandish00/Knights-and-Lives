@@ -83,6 +83,50 @@ List<RandomEvent> yearlyEvents = new List<RandomEvent>
     },
 };
 
+List<FamilyName> familyNames = new List<FamilyName>
+{
+    new FamilyName
+    {
+        Id = 1,
+        Name = "Reagans",
+        IsRoyalty = true,
+        IsWarrior = false,
+        IsPeasant = false,
+    },
+    new FamilyName
+    {
+        Id = 2,
+        Name = "Woodson",
+        IsRoyalty = false,
+        IsWarrior = false,
+        IsPeasant = true,
+    },
+    new FamilyName
+    {
+        Id = 3,
+        Name = "Borne of the Dragon",
+        IsRoyalty = false,
+        IsWarrior = true,
+        IsPeasant = false,
+    },
+    new FamilyName
+    {
+        Id = 4,
+        Name = "Fielding",
+        IsRoyalty = false,
+        IsWarrior = false,
+        IsPeasant = true,
+    },
+    new FamilyName
+    {
+        Id = 5,
+        Name = "Clay",
+        IsRoyalty = false,
+        IsWarrior = false,
+        IsPeasant = true,
+    },
+};
+
 //get all yearly events
 app.MapGet(
     "/api/yearlyevents",
@@ -111,6 +155,30 @@ app.MapGet(
             RandomEvent foundRandomEvent = yearlyEvents.First(ye => id == ye.Id);
             return Results.Ok(
                 new RandomEventDTO { Id = foundRandomEvent.Id, Name = foundRandomEvent.Name }
+            );
+        }
+        catch
+        {
+            return Results.NotFound();
+        }
+    }
+);
+
+app.MapGet(
+    "/api/familynames",
+    () =>
+    {
+        try
+        {
+            return Results.Ok(
+                familyNames.Select(fn => new FamilyNameDTO
+                {
+                    Id = fn.Id,
+                    Name = fn.Name,
+                    IsRoyalty = fn.IsRoyalty,
+                    IsWarrior = fn.IsWarrior,
+                    IsPeasant = fn.IsPeasant,
+                })
             );
         }
         catch
