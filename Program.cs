@@ -125,6 +125,134 @@ List<FamilyName> familyNames = new List<FamilyName>
         IsWarrior = false,
         IsPeasant = true,
     },
+    new FamilyName
+    {
+        Id = 6,
+        Name = "Robertson",
+        IsRoyalty = false,
+        IsWarrior = true,
+        IsPeasant = false,
+    },
+    new FamilyName
+    {
+        Id = 7,
+        Name = "Richards",
+        IsRoyalty = false,
+        IsWarrior = false,
+        IsPeasant = true,
+    },
+    new FamilyName
+    {
+        Id = 8,
+        Name = "Parker",
+        IsRoyalty = false,
+        IsWarrior = true,
+        IsPeasant = false,
+    },
+    new FamilyName
+    {
+        Id = 9,
+        Name = "Dismay",
+        IsRoyalty = false,
+        IsWarrior = true,
+        IsPeasant = false,
+    },
+    new FamilyName
+    {
+        Id = 10,
+        Name = "DungEater",
+        IsRoyalty = false,
+        IsWarrior = false,
+        IsPeasant = true,
+    },
+    new FamilyName
+    {
+        Id = 11,
+        Name = "Riddle",
+        IsRoyalty = false,
+        IsWarrior = true,
+        IsPeasant = false,
+    },
+    new FamilyName
+    {
+        Id = 12,
+        Name = "Uzumaku",
+        IsRoyalty = true,
+        IsWarrior = false,
+        IsPeasant = false,
+    },
+    new FamilyName
+    {
+        Id = 13,
+        Name = "Bubbles",
+        IsRoyalty = true,
+        IsWarrior = false,
+        IsPeasant = false,
+    },
+    new FamilyName
+    {
+        Id = 14,
+        Name = "Wesson",
+        IsRoyalty = false,
+        IsWarrior = true,
+        IsPeasant = false,
+    },
+    new FamilyName
+    {
+        Id = 15,
+        Name = "The Last",
+        IsRoyalty = false,
+        IsWarrior = true,
+        IsPeasant = false,
+    },
+    new FamilyName
+    {
+        Id = 16,
+        Name = "Byars",
+        IsRoyalty = true,
+        IsWarrior = false,
+        IsPeasant = false,
+    },
+    new FamilyName
+    {
+        Id = 17,
+        Name = "Simuluth",
+        IsRoyalty = false,
+        IsWarrior = false,
+        IsPeasant = true,
+    },
+    new FamilyName
+    {
+        Id = 18,
+        Name = "Turs",
+        IsRoyalty = false,
+        IsWarrior = false,
+        IsPeasant = true,
+    },
+    new FamilyName
+    {
+        Id = 19,
+        Name = "Curro",
+        IsRoyalty = false,
+        IsWarrior = false,
+        IsPeasant = true,
+    },
+    new FamilyName
+    {
+        Id = 20,
+        Name = "Sarth",
+        IsRoyalty = false,
+        IsWarrior = false,
+        IsPeasant = true,
+    },
+    new FamilyName
+    {
+        Id = 21,
+        Name = "Skywalker",
+        IsRoyalty = true,
+        IsWarrior = false,
+        IsPeasant = false,
+    },
 };
 
 //get all yearly events
