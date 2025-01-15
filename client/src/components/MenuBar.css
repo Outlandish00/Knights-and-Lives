@@ -22,6 +22,9 @@ border: solid #6b7c38;
 }
 
 .menu-item{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     height: auto;
     flex-basis: 0; /* Ensures they start with equal base width */
     flex-grow: 1;
@@ -32,4 +35,21 @@ border: solid #6b7c38;
 }
 #menu-button:hover{
     background-image: radial-gradient(circle 30px, #c1de31, #3e5a1f);
+}
+
+.person-icon{
+color:#95b12b;
+height: 50px;
+}
+.social-icon{
+    color:#95b12b;
+    height: 50px;
+}
+.dots{
+    height: 50px;
+    color:#95b12b
+}
+.house{
+    height: 50px;
+    color:#95b12b   
 }
