@@ -20,3 +20,6 @@
     align-items: end;
     flex-direction: column-reverse;
 }
+#root {
+    background-color: rgb(17, 17, 17);
+}
