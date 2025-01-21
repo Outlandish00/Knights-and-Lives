@@ -255,6 +255,102 @@ List<FamilyName> familyNames = new List<FamilyName>
     },
 };
 
+//MajorEvent types, to allow or not allow certain events if they are royalty or not for example
+List<MajorEventType> majorEventTypes = new List<MajorEventType>
+{
+    new MajorEventType() { Id = 1, Type = "Financial" },
+    new MajorEventType() { Id = 2, Type = "War" },
+    new MajorEventType() { Id = 3, Type = "Royalty" },
+    new MajorEventType() { Id = 4, Type = "Random" },
+};
+List<PlayerStat> playerStats = new List<PlayerStat>
+{
+    new PlayerStat
+    {
+        Id = 1,
+        Name = "Health",
+        Value = 100,
+    },
+    new PlayerStat
+    {
+        Id = 2,
+        Name = "Hygeine",
+        Value = 100,
+    },
+    new PlayerStat
+    {
+        Id = 3,
+        Name = "Food",
+        Value = 100,
+    },
+    new PlayerStat
+    {
+        Id = 4,
+        Name = "Mood",
+        Value = 100,
+    },
+};
+
+//lists of Major Events (These will affect the game in some way. Stats, gold, etc.)
+List<RandomMajorEvent> majorEvents = new List<RandomMajorEvent>
+{
+    new RandomMajorEvent
+    {
+        Id = 1,
+        MajorEventTypeId = 4,
+        EventTitle = "Shady Alchemist",
+        Description =
+            "An alchemist approaches you, offering you a gilded potion. He states he is giving free samples to spread his business, do you accept the potion?",
+        Choices = new List<EventChoice>
+        {
+            new EventChoice
+            {
+                Id = 1,
+                ChoiceDescription = "Drink the gilded potion",
+                PositiveOutcome = "The Alchemist was a skilled one, health increased ",
+                NegativeOutcome = "Slimy alchemist, this potion was a poison",
+                PositiveProbability = 20,
+            },
+            new EventChoice
+            {
+                Id = 2,
+                ChoiceDescription = "Walk away, you can't trust them.",
+                PositiveOutcome = "You walked away.",
+                NegativeOutcome = "The alechimst's dignity is hurt, he hurls the potion at you",
+            },
+        },
+    },
+    new RandomMajorEvent()
+    {
+        Id = 2,
+        MajorEventTypeId = 4,
+        EventTitle = "A stranger in need",
+        Description = "You find a peasant laying in the road, appearing to have been knocked down.",
+        Choices = new List<EventChoice>
+        {
+            new EventChoice
+            {
+                Id = 3,
+                ChoiceDescription = "You take their hand, pulling them to their feet.",
+                PositiveOutcome =
+                    "They smile at you, and reach out the little coins they have as a thank you.",
+                NegativeOutcome =
+                    "As you grab their hand, you hear metal unsheating, and the sting in your ribs follow shortly after",
+                PositiveProbability = 80,
+            },
+            new EventChoice
+            {
+                Id = 4,
+                ChoiceDescription = "Walk away, you can't trust people in this world.",
+                PositiveOutcome = " You walk away, perhaps dooming a person, but being unscathed",
+                NegativeOutcome =
+                    "Your gut was correct, the peasant tosses a dagger at you as you turn",
+                PositiveProbability = 90,
+            },
+        },
+    },
+};
+
 //get all yearly events
 app.MapGet(
     "/api/yearlyevents",
@@ -313,6 +409,37 @@ app.MapGet(
         {
             return Results.NotFound();
         }
+    }
+);
+
+app.MapGet(
+    "/api/random-major-event",
+    () =>
+    {
+        Random rand = new Random();
+        RandomMajorEvent randomEvent = majorEvents[rand.Next(majorEvents.Count)];
+        if (randomEvent.Choices == null || randomEvent.Choices.Count == 0)
+        {
+            Console.WriteLine("No choices available for this event.");
+        }
+        RandomMajorEventDTO randomEventDTO = new RandomMajorEventDTO
+        {
+            Id = randomEvent.Id,
+            MajorEventTypeId = randomEvent.MajorEventTypeId,
+            EventTitle = randomEvent.EventTitle,
+            Description = randomEvent.Description,
+            Choices = randomEvent
+                .Choices.Select(choice => new EventChoicesDTO
+                {
+                    Id = choice.Id,
+                    ChoiceDescription = choice.ChoiceDescription,
+                    PositiveOutcome = choice.PositiveOutcome,
+                    NegativeOutcome = choice.NegativeOutcome,
+                    PositiveProbability = choice.PositiveProbability,
+                })
+                .ToList(),
+        };
+        return Results.Ok(randomEventDTO);
     }
 );
 
